@@ -23,6 +23,7 @@ int addToQueue(QUEUE* queue, int x1, int y1)
 	{
 		temp[i] = queue->data[i];
 	}
+
 	COORDINATE coord;
 	coord.x = x1;
 	coord.y = y1;
@@ -57,6 +58,57 @@ COORDINATE getItem(QUEUE* queue) {
 	queue->data = temp;
 	queue->size = queue->size - 1;
 	return coord;
+}
+
+int xyInQueue(QUEUE queue, int x, int y)
+{
+	COORDINATE coord;
+	coord.x = x;
+	coord.y = y;
+
+	return coordInQueue(&queue, coord);
+}
+
+int coordInQueue(QUEUE* queue, COORDINATE coord) {
+	int x = coord.x;
+	int y = coord.y;
+
+	for (int i = 0; i < queue->size; i++) {
+		int curX = queue->data[i].x;
+		int curY = queue->data[i].y;
+
+		if (x == curX && y == curY) {
+			return 1;
+		}
+	}
+	return 0;
+}
+
+void removeItem(QUEUE* queue, COORDINATE item) 
+{
+	if (queue->size < 1)
+	{
+		return;
+	}
+
+	COORDINATE* temp = malloc((queue->size - 1) * sizeof(COORDINATE));
+	if (!temp) {
+		printf("Memory reallocation failed.\n");
+		free(queue->data);
+		return;
+	}
+
+	for (int i = 0; i < queue->size-1; i++)
+	{
+		if (item.x == queue->data[i].x && item.y == queue->data[i].y) \
+		{
+			i++;
+		}
+		temp[i] = queue->data[i];
+	}
+	free(queue->data);
+	queue->data = temp;
+	queue->size = queue->size - 1;
 }
 
 void print_queue(QUEUE* queue)

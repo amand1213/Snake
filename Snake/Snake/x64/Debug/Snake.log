@@ -1,8 +1,9 @@
 ﻿  main.c
-C:\Users\Alex\Documents\VSCode\C\Snake\Snake\Snake\main.c(117,19): warning C4244: 'function': conversion from 'double' to 'DWORD', possible loss of data
-C:\Users\Alex\Documents\VSCode\C\Snake\Snake\Snake\main.c(131,19): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Alex\Documents\VSCode\C\Snake\Snake\Snake\main.c(115,24): warning C4101: 'last': unreferenced local variable
-C:\Users\Alex\Documents\VSCode\C\Snake\Snake\Snake\main.c(189,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Alex\Documents\VSCode\C\Snake\Snake\Snake\main.c(192,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Alex\Documents\VSCode\C\Snake\Snake\Snake\main.c(156,1): warning C4716: 'snake': must return a value
-  Snake.vcxproj -> C:\Users\Alex\Documents\VSCode\C\Snake\Snake\x64\Debug\Snake.exe
+C:\Users\amand\OneDrive\Documents\VSCODE\C\Snake\Snake\Snake\main.c(28,11): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\amand\OneDrive\Documents\VSCODE\C\Snake\Snake\Snake\main.c(177,19): warning C4244: 'function': conversion from 'double' to 'DWORD', possible loss of data
+C:\Users\amand\OneDrive\Documents\VSCODE\C\Snake\Snake\Snake\main.c(191,19): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\amand\OneDrive\Documents\VSCODE\C\Snake\Snake\Snake\main.c(174,28): warning C4101: 'last': unreferenced local variable
+C:\Users\amand\OneDrive\Documents\VSCODE\C\Snake\Snake\Snake\main.c(252,16): warning C4013: 'random' undefined; assuming extern returning int
+C:\Users\amand\OneDrive\Documents\VSCODE\C\Snake\Snake\Snake\main.c(266,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\amand\OneDrive\Documents\VSCODE\C\Snake\Snake\Snake\main.c(269,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Snake.vcxproj -> C:\Users\amand\OneDrive\Documents\VSCODE\C\Snake\Snake\x64\Debug\Snake.exe

@@ -1,13 +1,16 @@
 #include <SDL.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <windows.h>
+#include <time.h>
 #include "queue.h"
 #include "coord.h"
 
 void draw_rectangle(SDL_Renderer* renderer, int x1, int y1, int x2, int y2);
-int snake(SDL_Renderer* renderer);
 void renderSnake(SDL_Renderer* renderer, QUEUE snake);
-void frame(SDL_Renderer* renderer, QUEUE snake);
+void renderApples(SDL_Renderer* renderer, QUEUE apples);
+void frame(SDL_Renderer* renderer, QUEUE snake, QUEUE apples);
+void newApple(QUEUE snake, QUEUE* apples, COORDINATE oldApple);
 void clear(SDL_Renderer* renderer);
 void clear_buffer(void);
 
@@ -18,10 +21,11 @@ void clear_buffer(void);
 #define WIDTH (GAME_WIDTH * PIXEL_SIZE)
 #define HEIGHT (GAME_HEIGHT * PIXEL_SIZE)
 
-#define FPS 12
+#define FPS 10
 #define SLEEP_TIME (1.0/FPS)*1000
 
 int main(int argc, char* argv[]) {
+    srand(time(NULL));
     
     // Initialize SDL
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
@@ -62,10 +66,22 @@ int main(int argc, char* argv[]) {
 
     // Main loop
     while (!quit) {
-        QUEUE snake = makeQueue(1);
+        QUEUE snake = makeQueue();
         int x = GAME_WIDTH / 2;
         int y = GAME_HEIGHT / 2;
         addToQueue(&snake, x, y);
+        
+        int snakeSize = 1;
+        int growth = 3;
+
+        QUEUE apples = makeQueue();
+        x = 0;
+        y = 0;
+        addToQueue(&apples, x, y);
+        COORDINATE apple;
+        apple.x = x;
+        apple.y = y;
+        newApple(snake, &apples, apple);
 
         COORDINATE dir;
         dir.x = 0;
@@ -86,18 +102,22 @@ int main(int argc, char* argv[]) {
                     switch (e.key.keysym.sym)
                     {
                     case SDLK_UP:
+                        if (dir.y == 1) break;
                         dir.x = 0;
                         dir.y = -1;
                         break;
                     case SDLK_DOWN:
+                        if (dir.y == -1) break;
                         dir.x = 0;
                         dir.y = 1;
                         break;
                     case SDLK_RIGHT:
+                        if (dir.x == -1) break;
                         dir.x = 1;
                         dir.y = 0;
                         break;
                     case SDLK_LEFT:
+                        if (dir.x == 1) break;
                         dir.x = -1;
                         dir.y = 0;
                         break;
@@ -111,9 +131,49 @@ int main(int argc, char* argv[]) {
 
             int newX = snake.data[snake.size - 1].x+ dir.x;
             int newY = snake.data[snake.size - 1].y+dir.y;
+            COORDINATE newCoord;
+
+            newCoord.x = newX;
+            newCoord.y = newY;
+
+            // Collision with apple
+            if (xyInQueue(apples, newX, newY)) {
+                snakeSize += growth;
+                newApple(snake, &apples, newCoord);
+            }
+            
+            // Collision with self
+            if (xyInQueue(snake, newX, newY) && snakeSize != 1) {
+                gameover = 1;
+                break;
+            }
+
+            if (newX < 0)
+            {
+                newX = GAME_WIDTH - 1;
+            }
+
+            if (newX >= GAME_WIDTH)
+            {
+                newX = 0;
+            }
+
+            if (newY < 0)
+            {
+                newY = GAME_HEIGHT - 1; 
+            }
+
+            if (newY >= GAME_HEIGHT)
+            {
+                newY = 0;
+            }
+
             addToQueue(&snake, newX, newY);
-            COORDINATE last = getItem(&snake);
-            frame(renderer, snake);
+            
+            if (snake.size > snakeSize) {
+                COORDINATE last = getItem(&snake);
+            }
+            frame(renderer, snake, apples);
             Sleep(SLEEP_TIME);
         }
         delete_queue(&snake);
@@ -150,14 +210,10 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 
-int snake(SDL_Renderer* renderer)
-{
-    
-}
-
-void frame(SDL_Renderer* renderer, QUEUE snake)
+void frame(SDL_Renderer* renderer, QUEUE snake, QUEUE apples)
 {
     renderSnake(renderer, snake);
+    renderApples(renderer, apples);
     // Update screen
     SDL_RenderPresent(renderer);
 }
@@ -171,11 +227,32 @@ void renderSnake(SDL_Renderer* renderer, QUEUE snake)
     }
 }
 
+void renderApples(SDL_Renderer* renderer, QUEUE apples)
+{
+    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255); // Red
+    for (int i = 0; i < apples.size; i++)
+    {
+        draw_rectangle(renderer, apples.data[i].x * PIXEL_SIZE, apples.data[i].y * PIXEL_SIZE, PIXEL_SIZE, PIXEL_SIZE);
+    }
+}
+
 void clear(SDL_Renderer* renderer)
 {
     // Clear screen
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Black
     SDL_RenderClear(renderer);
+}
+
+void newApple(QUEUE snake, QUEUE* apples, COORDINATE oldApple) {
+    removeItem(apples, oldApple);
+
+    int newX;
+    int newY;
+    do {
+        newX = random(GAME_WIDTH-1, 0);
+        newY = random(GAME_HEIGHT-1, 0);
+    } while (xyInQueue(snake, newX, newY));
+    addToQueue(apples, newX, newY);
 }
 
 void draw_rectangle(SDL_Renderer* renderer, int x1, int y1, int x2, int y2)
@@ -191,4 +268,8 @@ void clear_buffer(void) {
     {
         scanf("%c", &c);
     }
+}
+
+int random(int MAX, int MIN) {
+    return rand() % (MAX - MIN + 1) + MIN;
 }

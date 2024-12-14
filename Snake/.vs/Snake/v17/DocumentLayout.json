@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Alex\\Documents\\VSCode\\C\\Snake\\Snake\\",
+  "WorkspaceRootPath": "C:\\Users\\amand\\OneDrive\\Documents\\VSCODE\\C\\Snake\\Snake\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{24C4764D-F654-4E1B-9A6D-740B1244CB6C}|Snake\\Snake.vcxproj|C:\\Users\\Alex\\Documents\\VSCode\\C\\Snake\\Snake\\Snake\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{24C4764D-F654-4E1B-9A6D-740B1244CB6C}|Snake\\Snake.vcxproj|C:\\Users\\amand\\OneDrive\\Documents\\VSCODE\\C\\Snake\\Snake\\Snake\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{24C4764D-F654-4E1B-9A6D-740B1244CB6C}|Snake\\Snake.vcxproj|solutionrelative:Snake\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24C4764D-F654-4E1B-9A6D-740B1244CB6C}|Snake\\Snake.vcxproj|C:\\Users\\Alex\\Documents\\VSCode\\C\\Snake\\Snake\\Snake\\queue.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{24C4764D-F654-4E1B-9A6D-740B1244CB6C}|Snake\\Snake.vcxproj|C:\\Users\\amand\\OneDrive\\Documents\\VSCODE\\C\\Snake\\Snake\\Snake\\queue.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{24C4764D-F654-4E1B-9A6D-740B1244CB6C}|Snake\\Snake.vcxproj|solutionrelative:Snake\\queue.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24C4764D-F654-4E1B-9A6D-740B1244CB6C}|Snake\\Snake.vcxproj|C:\\Users\\Alex\\Documents\\VSCode\\C\\Snake\\Snake\\Snake\\queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{24C4764D-F654-4E1B-9A6D-740B1244CB6C}|Snake\\Snake.vcxproj|C:\\Users\\amand\\OneDrive\\Documents\\VSCODE\\C\\Snake\\Snake\\Snake\\queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{24C4764D-F654-4E1B-9A6D-740B1244CB6C}|Snake\\Snake.vcxproj|solutionrelative:Snake\\queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24C4764D-F654-4E1B-9A6D-740B1244CB6C}|Snake\\Snake.vcxproj|C:\\Users\\Alex\\Documents\\VSCode\\C\\Snake\\Snake\\Snake\\coord.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{24C4764D-F654-4E1B-9A6D-740B1244CB6C}|Snake\\Snake.vcxproj|C:\\Users\\amand\\OneDrive\\Documents\\VSCODE\\C\\Snake\\Snake\\Snake\\coord.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{24C4764D-F654-4E1B-9A6D-740B1244CB6C}|Snake\\Snake.vcxproj|solutionrelative:Snake\\coord.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -32,11 +32,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.c",
-              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\VSCode\\C\\Snake\\Snake\\Snake\\main.c",
+              "DocumentMoniker": "C:\\Users\\amand\\OneDrive\\Documents\\VSCODE\\C\\Snake\\Snake\\Snake\\main.c",
               "RelativeDocumentMoniker": "Snake\\main.c",
-              "ToolTip": "C:\\Users\\Alex\\Documents\\VSCode\\C\\Snake\\Snake\\Snake\\main.c",
+              "ToolTip": "C:\\Users\\amand\\OneDrive\\Documents\\VSCODE\\C\\Snake\\Snake\\Snake\\main.c",
               "RelativeToolTip": "Snake\\main.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-12-13T05:02:23.112Z",
               "IsPinned": true,
@@ -46,37 +46,40 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "coord.h",
-              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\VSCode\\C\\Snake\\Snake\\Snake\\coord.h",
+              "DocumentMoniker": "C:\\Users\\amand\\OneDrive\\Documents\\VSCODE\\C\\Snake\\Snake\\Snake\\coord.h",
               "RelativeDocumentMoniker": "Snake\\coord.h",
-              "ToolTip": "C:\\Users\\Alex\\Documents\\VSCode\\C\\Snake\\Snake\\Snake\\coord.h",
+              "ToolTip": "C:\\Users\\amand\\OneDrive\\Documents\\VSCODE\\C\\Snake\\Snake\\Snake\\coord.h",
               "RelativeToolTip": "Snake\\coord.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-13T06:46:43.573Z"
+              "WhenOpened": "2024-12-13T06:46:43.573Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "queue.h",
-              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\VSCode\\C\\Snake\\Snake\\Snake\\queue.h",
+              "DocumentMoniker": "C:\\Users\\amand\\OneDrive\\Documents\\VSCODE\\C\\Snake\\Snake\\Snake\\queue.h",
               "RelativeDocumentMoniker": "Snake\\queue.h",
-              "ToolTip": "C:\\Users\\Alex\\Documents\\VSCode\\C\\Snake\\Snake\\Snake\\queue.h",
+              "ToolTip": "C:\\Users\\amand\\OneDrive\\Documents\\VSCODE\\C\\Snake\\Snake\\Snake\\queue.h",
               "RelativeToolTip": "Snake\\queue.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAKAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-13T06:21:17.282Z"
+              "WhenOpened": "2024-12-13T06:21:17.282Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "queue.c",
-              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\VSCode\\C\\Snake\\Snake\\Snake\\queue.c",
+              "DocumentMoniker": "C:\\Users\\amand\\OneDrive\\Documents\\VSCODE\\C\\Snake\\Snake\\Snake\\queue.c",
               "RelativeDocumentMoniker": "Snake\\queue.c",
-              "ToolTip": "C:\\Users\\Alex\\Documents\\VSCode\\C\\Snake\\Snake\\Snake\\queue.c",
+              "ToolTip": "C:\\Users\\amand\\OneDrive\\Documents\\VSCODE\\C\\Snake\\Snake\\Snake\\queue.c",
               "RelativeToolTip": "Snake\\queue.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-12-13T05:34:31.157Z"
+              "WhenOpened": "2024-12-13T05:34:31.157Z",
+              "EditorCaption": ""
             }
           ]
         }
